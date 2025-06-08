@@ -10,11 +10,14 @@ BROWSER='firefox'
 OPEN_IN='new tab'
 BASEURL='https://www.duckduckgo.com/?q='
 SEARCH_TERM_SOURCE="command line"
-while getopts :agdmiysvwWTGFKx OPT; do
+while getopts :abgdmiysvwWTGFKx OPT; do
 
     case $OPT in
         a|+a)
             BASEURL='http://adsabs.harvard.edu/cgi-bin/nph-basic_connect?qsearch='
+            ;;
+        b|+b)
+            BASEURL='https://search.brave.com/search?q='
             ;;
         g|+g)
             BASEURL='https://www.google.com/#q='
